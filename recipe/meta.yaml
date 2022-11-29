@@ -12,8 +12,7 @@ source:
 build:
   noarch: python
   script:
-    - {{ PYTHON }} -m pdm build -vv
-    - {{ PYTHON }} -m pip install dist/unearth-{{ version }}-py3-none-any.whl -vv
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - unearth = unearth.__main__:cli
   number: 0
@@ -22,7 +21,6 @@ requirements:
   host:
     - pip <22.2
     - python >=3.7
-    - pdm
     - pdm-pep517
     - setuptools
   run:
