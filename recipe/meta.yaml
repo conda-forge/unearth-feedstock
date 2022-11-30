@@ -1,5 +1,5 @@
 {% set name = "unearth" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unearth-{{ version }}.tar.gz
-  sha256: 4b7bfbd7d34a11673d80dfae7fabbf921c139aac78383fb0ca16a90d3b53a66e
+  sha256: 130d0c59159795ae66986c1dcbe5d2ddd1da19841972d8d73510d5204b3817ea
 
 build:
   noarch: python
-  script: 
-    - {{ PYTHON }} -m pdm build -vv
-    - {{ PYTHON }} -m pip install dist/unearth-{{ version }}-py3-none-any.whl -vv
+  script:
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - unearth = unearth.__main__:cli
   number: 0
@@ -22,7 +21,6 @@ requirements:
   host:
     - pip <22.2
     - python >=3.7
-    - pdm
     - pdm-pep517
     - setuptools
   run:
