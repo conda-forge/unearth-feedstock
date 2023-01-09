@@ -15,7 +15,7 @@ build:
     - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - unearth = unearth.__main__:cli
-  number: 0
+  number: 1
 
 requirements:
   host:
