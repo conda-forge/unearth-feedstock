@@ -145,6 +145,3 @@ Feedstock Maintainers
 
 * [@theAeon](https://github.com/theAeon/)
 
-
-<!-- dummy commit to enable rerendering -->
-
