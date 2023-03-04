@@ -1,5 +1,5 @@
 {% set name = "unearth" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unearth-{{ version }}.tar.gz
-  sha256: cdb20ae9e5501557a0adccb04d77807185da66ddb54ced844731574019d28582
+  sha256: 62d3493619d181746c0e0586dfcf6cef957b95f4d3b042698eda312fdbf0617b
 
 build:
   noarch: python
