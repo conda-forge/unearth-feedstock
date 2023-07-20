@@ -21,7 +21,7 @@ requirements:
   host:
     - pip <22.2
     - python >=3.7
-    - pdm-pep517
+    - pdm-backend
     - setuptools
   run:
     - cached-property >=1.5.2
