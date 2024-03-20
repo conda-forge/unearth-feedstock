@@ -28,6 +28,7 @@ requirements:
     - packaging >=20
     - python >=3.7
     - requests >=2.25
+    - httpx
 
 test:
   imports:
