@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/unearth-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/unearth-{{ version }}.tar.gz
   sha256: 0b8a2afd3476f1ab6155fc579501ac47fffe43547d88a70e5a5b76a7fe6caa2c
 
 build:
@@ -15,18 +15,18 @@ build:
     - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - unearth = unearth.__main__:cli
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - pdm-backend
     - setuptools
   run:
     - cached-property >=1.5.2
     - packaging >=20
-    - python >=3.7
+    - python >={{ python_min }}
     - requests >=2.25
     - httpx
 
@@ -47,6 +47,7 @@ test:
     - trustme >=0.9.0
     - keyring
     - openssl <3.0.0
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/unearth/
