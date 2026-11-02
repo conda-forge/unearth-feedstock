@@ -28,7 +28,7 @@ requirements:
     - packaging >=20
     - python >={{ python_min }}
     - requests >=2.25
-    - httpx
+    - httpx2
 
 test:
   imports:
